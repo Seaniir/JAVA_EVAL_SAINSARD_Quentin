@@ -29,7 +29,7 @@ public abstract class Vehicule
     protected float fairePlein(Pompe pompe)
     {
         if (pompe.getTypeCarburant() == this.typeCarburant) {
-            if (pompe.getContenu() >= this.contenanceReservoir) {
+            if (pompe.getContenu() >= this.contenanceReservoir && this.contenuReservoir < this.contenanceReservoir) {
                 this.contenuReservoir = this.contenanceReservoir;
                 pompe.setContenu(pompe.getContenu() - this.contenuReservoir);
             }
